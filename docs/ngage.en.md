@@ -24,7 +24,7 @@ If you have an **N-Gage**, you can dump this ROM yourself. Here is the method:
 
 ## Install N-Gage device from ROM
 
-Using the *ROM* obtained, install the device using the [*ROM + RPKG method*](/basic/installdevice/#rom-rpkg-method).
+Using the *ROM* obtained, install the device using the [*ROM + RPKG method*](/{{ posts_root }}/basic/installdevice/#rom-rpkg-method).
 
 !!! note
 	Using this method, you just need to browse to the ROM. For ease, name the ROM as *SYM.ROM*. If it asked you for RPKG, contact the developer for support.
@@ -37,7 +37,7 @@ Using the *ROM* obtained, install the device using the [*ROM + RPKG method*](/ba
 
 - **DRM-ed game:** These games rely on the presence of a physical MMC card to check for its MMC-ID, to see if the game is contained on a copied-card or not sit on a MMC card at all. The executable of the game is obsfucated so that reverse engineering is harder. Most of N-Gage libraries do this.
 
-For **Patched games**, see install instructions [here](/basic/installapp/#n-gage-game-card-dump).
+For **Patched games**, see install instructions [here](/{{ posts_root }}/basic/installapp/#n-gage-game-card-dump).
 
 For **DRM-ed game**, in the future, planned **AAru** support should simplify the play process. But for now, there is no way to install them. See the next section on how to play them.
 
@@ -64,7 +64,7 @@ For **DRM-ed game**, in the future, planned **AAru** support should simplify the
 		* Note that the **Folder** field shows the name of the current folder. If the field shows **System**, it is not valid. But the emulator will put out a warning for you if that happens.
 
 <figure markdown>
-  ![N-Gage game card dialog](/assets/ngage/mount_example.png)
+  ![N-Gage game card dialog](/{{ assets_root }}/ngage/mount_example.png)
   <figcaption>Mount game card dump window</figcaption>
 </figure>
 

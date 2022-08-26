@@ -5,7 +5,7 @@ Most phones running **Symbian** has support for playing J2ME apps/games to some 
 The J2ME runtime and J2ME player is included in the ROM, and with each iteration of Symbian, the J2ME runner evolved and sometime is completely different from previous J2ME runner on older **Symbian** version.
 
 !!! note
-	The support of running J2ME applications on EKA2L1 comes off as just-for-fun. If you want to play J2ME games with more customization, check out **KEmulator** on desktop, or **[J2ME-Loader](/j2me)** on Android
+	The support of running J2ME applications on EKA2L1 comes off as just-for-fun. If you want to play J2ME games with more customization, check out **KEmulator** on desktop, or **[J2ME-Loader](https://play.google.com/store/apps/details?id=ru.playsoftware.j2meloader&hl=en&gl=US)** on Android
 	
 ## Supported emulated devices
 
@@ -29,7 +29,7 @@ This is due to the fact that S60v1 J2ME runner only support MIDP 1.0.
 
 **2.** Click on the **File** menu, and then navigate to **Install/JAR**. Click and choose JAR file you want to install.
 
-![desc](/assets/j2me/j2me_install_menu_and_device.png)
+![desc](/{{ assets_root }}/j2me/j2me_install_menu_and_device.png)
 
 For example, in the image above, you can see N-Gage device being choosen in the right-hand combo box. And **File/Install/JAR** menu is displayed.
 
@@ -42,7 +42,7 @@ For example, in the image above, you can see N-Gage device being choosen in the 
 - If its name is **J2ME**, the app list grid will switch to J2ME mode, which will display only J2ME game.
 
 <figure markdown>
-  ![App list in Symbian mode](/assets/j2me/j2me_native_app_list.png)
+  ![App list in Symbian mode](/{{ assets_root }}/j2me/j2me_native_app_list.png)
   <figcaption>App list in Symbian mode, which displays native game.</figcaption>
 </figure>
 
@@ -51,7 +51,7 @@ The image above shows the native application list in action. The button being ci
 To switch to **J2ME mode**, press on that same button.
 
 <figure markdown>
-  ![App list in J2ME mode](/assets/j2me/j2me_app_list.png)
+  ![App list in J2ME mode](/{{ assets_root }}/j2me/j2me_app_list.png)
   <figcaption>The app list is now in J2ME mode. Native applications are not in display anymore.</figcaption>
 </figure>
 

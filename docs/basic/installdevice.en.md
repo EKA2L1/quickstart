@@ -41,7 +41,7 @@ To install a new device, please go to *File/Install/Device*, or follow the dialo
 
 
 <figure markdown>
-  ![The device install dialog](/assets/setup/device_dialog.png)
+  ![The device install dialog](/{{ assets_root }}/setup/device_dialog.png)
   <figcaption>The device install dialog</figcaption>
 </figure>
 
@@ -50,7 +50,7 @@ To install a new device, please go to *File/Install/Device*, or follow the dialo
 Choose the **Device dump** installation method in the combo-box, and click the first *Browse* to select the ROM you have prepared. If the emulator detects that the ROM is not enough alone, a RPKG file browser will appear.
 
 <figure markdown>
-  ![The RPKG field appears with 5320 ROM selected](/assets/setup/device_dialog_with_rpkg.png)
+  ![The RPKG field appears with 5320 ROM selected](/{{ assets_root }}/setup/device_dialog_with_rpkg.png)
   <figcaption>The RPKG field appears with 5320 ROM selected</figcaption>
 </figure>
 
@@ -63,7 +63,7 @@ Then wait for the progress bar to be completed and a success dialog to pop up.
 Choose the **Firmware (VPL)** installation method in the combo-box. The ROM label will be renamed to VPL, and then you can click **Browse** to choose the VPL that came along with the firmware.
 
 <figure markdown>
-  ![The VPL install dialog](/assets/setup/device_dialog_vpl.png)
+  ![The VPL install dialog](/{{ assets_root }}/setup/device_dialog_vpl.png)
   <figcaption>The VPL install dialog</figcaption>
 </figure>
 
@@ -72,7 +72,7 @@ A dialog should appear request you to choose a firmware variant. This usually is
 After that is the same process as **Device dump**.
 
 <figure markdown>
-  ![Installation success dialog](/assets/setup/device_dialog_install_success.png)
+  ![Installation success dialog](/{{ assets_root }}/setup/device_dialog_install_success.png)
   <figcaption>Installation success dialog</figcaption>
 </figure>
 
@@ -83,14 +83,14 @@ If you meets the dialog above, then that means you are done installing a device.
 First run of the emulator should show you a dialog that requests you to install a device. Press the *Install* dialog, to quickly get to the **Device manager**.
 
 <figure markdown>
-  ![The request install dialog](/assets/setup/android_device_install_request.jpg)
+  ![The request install dialog](/{{ assets_root }}/setup/android_device_install_request.jpg)
   <figcaption>The request install dialog</figcaption>
 </figure>
 
 If the dialog does not appear, press the three dots at the top right of your screen, and select **Devices**.
 
 <figure markdown>
-  ![Android devices screen](/assets/setup/android_devices_activity.jpg)
+  ![Android devices screen](/{{ assets_root }}/setup/android_devices_activity.jpg)
   <figcaption>Android devices screen</figcaption>
 </figure>
 
@@ -101,7 +101,7 @@ In this screen:
   - If you have prepared a firmware, choose the **Firmware (VPL)** installation method. The ROM button will be renamed to VPL, and then you can click on the *VPL* button to choose the VPL that came along with the firmware.
 
 <figure markdown>
-  ![All file paths are filled](/assets/setup/android_device_all_choosen.jpg)
+  ![All file paths are filled](/{{ assets_root }}/setup/android_device_all_choosen.jpg)
   <figcaption>All file paths are filled</figcaption>
 </figure>
 
@@ -109,7 +109,7 @@ In this screen:
 After you have filled all the paths, press *Install*. You can only cancel this operation by exiting the app, and no need further action until a small toast notification tells you that the installation is success or encounters failures.
 
 <figure markdown>
-  ![New device appeared after installation](/assets/setup/android_new_device_appears.jpg)
+  ![New device appeared after installation](/{{ assets_root }}/setup/android_new_device_appears.jpg)
   <figcaption>New device appeared after installation</figcaption>
 </figure>
 

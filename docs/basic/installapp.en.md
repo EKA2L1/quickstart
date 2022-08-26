@@ -38,7 +38,7 @@ To install N-Gage game card as a game, on desktop version, navigte to *File/Inst
 Please choose the game folder that contains the **System** folder. This is very important!
 
 <figure markdown>
-  ![N-Gage game card dialog](/assets/install_apps/install_ngage_card_game_folder.png)
+  ![N-Gage game card dialog](/{{ assets_root }}/install_apps/install_ngage_card_game_folder.png)
   <figcaption>N-Gage game card dialog</figcaption>
 </figure>
 
@@ -47,6 +47,6 @@ The above image shows the content of the folder that you should choose to instal
 On all operating systems, please note that the name field must not be the **System**, else the **System** folder will be choosen to be installed, resulting in a failure. If you accidentally select the **System** folder, try to press **Back button** and then open the correct folder again.
 
 <figure markdown>
-  ![N-Gage game card dialog](/assets/install_apps/install_ngage_card_game_folder_wrong.png)
+  ![N-Gage game card dialog](/{{ assets_root }}/install_apps/install_ngage_card_game_folder_wrong.png)
   <figcaption>Wrong folder choosen! Note the <b>System</b> folder in the red-circled folder name field</figcaption>
 </figure>

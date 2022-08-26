@@ -57,7 +57,7 @@ To make your emulator instance visible to other emulator instances:
 		+ Port 15000 - 15100 *(TCP or TCP/UDP)*
 
 <figure markdown>
-  ![Example port forward rules](/{{ {{ assets_root }}_root }}/btnetplay/example_port_forward_rules.png)
+  ![Example port forward rules](/{{ assets_root }}/btnetplay/example_port_forward_rules.png)
   <figcaption>Example port forward/mapping rules for EKA2L1 on a Huawei router</figcaption>
 </figure>
 
