@@ -57,7 +57,7 @@ To make your emulator instance visible to other emulator instances:
 		+ Port 15000 - 15100 *(TCP or TCP/UDP)*
 
 <figure markdown>
-  ![Example port forward rules](/assets/btnetplay/example_port_forward_rules.png)
+  ![Example port forward rules](/{{ {{ assets_root }}_root }}/btnetplay/example_port_forward_rules.png)
   <figcaption>Example port forward/mapping rules for EKA2L1 on a Huawei router</figcaption>
 </figure>
 
@@ -82,7 +82,7 @@ To make your emulator instance visible to other emulator instances:
 In the configuration window, choose *Server* as the bluetooth netplay mode.
 
 <figure markdown>
-  ![List of configurations in Server mode on Desktop version](/assets/btnetplay/configure_window_desktop.png)
+  ![List of configurations in Server mode on Desktop version](/{{ assets_root }}/btnetplay/configure_window_desktop.png)
   <figcaption>List of configurations in Server mode on Desktop version</figcaption>
 </figure>
 

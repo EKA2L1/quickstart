@@ -48,3 +48,4 @@ nav:
     - btnetplay.md    
 extra:
   current_duck_url: https://raw.githubusercontent.com/EKA2L1/EKA2L1/master/src/emu/qt/assets/duck_tank_fedora.png
+  assets_root: quickstart/assets
