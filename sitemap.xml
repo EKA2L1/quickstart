@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+         <loc>btnetplay/</loc>
+         <lastmod>2022-08-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="en/btnetplay/"/>
+         <xhtml:link rel="alternate" hreflang="vi" href="vi/btnetplay/"/>
+         
+    </url>
+    <url>
+         <loc>donation/</loc>
+         <lastmod>2022-08-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="en/donation/"/>
+         <xhtml:link rel="alternate" hreflang="vi" href="vi/donation/"/>
+         
+    </url>
+    <url>
+         <loc>.</loc>
+         <lastmod>2022-08-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="en/"/>
+         <xhtml:link rel="alternate" hreflang="vi" href="vi/"/>
+         
+    </url>
+    <url>
+         <loc>j2me/</loc>
+         <lastmod>2022-08-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="en/j2me/"/>
+         <xhtml:link rel="alternate" hreflang="vi" href="vi/j2me/"/>
+         
+    </url>
+    <url>
+         <loc>ngage/</loc>
+         <lastmod>2022-08-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="en/ngage/"/>
+         <xhtml:link rel="alternate" hreflang="vi" href="vi/ngage/"/>
+         
+    </url>
+    <url>
+         <loc>requirements/</loc>
+         <lastmod>2022-08-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="en/requirements/"/>
+         <xhtml:link rel="alternate" hreflang="vi" href="vi/requirements/"/>
+         
+    </url>
+    <url>
+         <loc>basic/installapp/</loc>
+         <lastmod>2022-08-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="en/basic/installapp/"/>
+         <xhtml:link rel="alternate" hreflang="vi" href="vi/basic/installapp/"/>
+         
+    </url>
+    <url>
+         <loc>basic/installdevice/</loc>
+         <lastmod>2022-08-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="en/basic/installdevice/"/>
+         <xhtml:link rel="alternate" hreflang="vi" href="vi/basic/installdevice/"/>
+         
+    </url>
+    <url>
+         <loc>basic/wheretostart/</loc>
+         <lastmod>2022-08-26</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="en/basic/wheretostart/"/>
+         <xhtml:link rel="alternate" hreflang="vi" href="vi/basic/wheretostart/"/>
+         
+    </url>
+</urlset>

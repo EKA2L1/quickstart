@@ -1,0 +1,710 @@
+
+<!doctype html>
+<html lang="vi" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="https://raw.githubusercontent.com/EKA2L1/EKA2L1/master/src/emu/qt/assets/duck_tank_fedora.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.1">
+    
+    
+      
+        <title>N-Gage - EKA2L1 Quickstart</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#795649">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#n-gage" class="md-skip">
+          Vào thẳng nội dung
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../" title="EKA2L1 Quickstart" class="md-header__button md-logo" aria-label="EKA2L1 Quickstart" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/EKA2L1/EKA2L1/master/src/emu/qt/assets/duck_tank_fedora.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EKA2L1 Quickstart
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              N-Gage
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="../../ngage/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="./" hreflang="vi" class="md-select__link">
+                    Tiếng Việt
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Tìm kiếm" placeholder="Tìm kiếm" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="EKA2L1 Quickstart" class="md-nav__button md-logo" aria-label="EKA2L1 Quickstart" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/EKA2L1/EKA2L1/master/src/emu/qt/assets/duck_tank_fedora.png" alt="logo">
+
+    </a>
+    EKA2L1 Quickstart
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://12z1.com/" class="md-nav__link">
+        Trang chủ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Chào mừng
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements/" class="md-nav__link">
+        Yêu cầu cấu hình
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../donation/" class="md-nav__link">
+        Donation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Hướng dẫn
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hướng dẫn" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Hướng dẫn
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Cơ bản
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cơ bản" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Cơ bản
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/wheretostart/" class="md-nav__link">
+        Where to start
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/installdevice/" class="md-nav__link">
+        Install a device
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/installapp/" class="md-nav__link">
+        Install apps
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          N-Gage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        N-Gage
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Mục lục
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#obtaining-the-n-gage-system-rom" class="md-nav__link">
+    Obtaining the N-Gage system ROM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-n-gage-device-from-rom" class="md-nav__link">
+    Install N-Gage device from ROM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-n-gage-games" class="md-nav__link">
+    Install N-Gage games
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#play-drm-ed-n-gage-games" class="md-nav__link">
+    Play DRM-ed N-Gage games
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../j2me/" class="md-nav__link">
+        J2ME
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../btnetplay/" class="md-nav__link">
+        Bluetooth netplay
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Mục lục
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#obtaining-the-n-gage-system-rom" class="md-nav__link">
+    Obtaining the N-Gage system ROM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-n-gage-device-from-rom" class="md-nav__link">
+    Install N-Gage device from ROM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-n-gage-games" class="md-nav__link">
+    Install N-Gage games
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#play-drm-ed-n-gage-games" class="md-nav__link">
+    Play DRM-ed N-Gage games
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="n-gage">N-Gage</h1>
+<p><strong>N-Gage</strong> is a 2003 game console by <strong>Nokia</strong>, powered by the Series 60 version 1. At the core, it's just a phone running Symbian OS with some exclusive functionalities. </p>
+<p>This page is intended to laid out the road of getting the emulator running, for those who exclusively want to try out this phone.</p>
+<h2 id="obtaining-the-n-gage-system-rom">Obtaining the N-Gage system ROM</h2>
+<p>For those who are used to <strong>Nitendo/PlayStation game consoles,</strong> consider this ROM as a BIOS. The emulator relies on this to run <strong>N-Gage</strong> games.</p>
+<p>If you have an <strong>N-Gage</strong>, you can dump this ROM yourself. Here is the method:</p>
+<ol>
+<li>
+<p>Compile and obtain the Symbian Dumper EXE from <a href="https://gitlab.com/tambre/rusty_starship/-/tree/master/symbian_dumper"><strong>Rusty Starship</strong></a> by <em>Raul Tambre</em></p>
+</li>
+<li>
+<p>Copy the EXE onto your MMC card.</p>
+</li>
+<li>
+<p>Insert the MMC card into the N-Gage.</p>
+</li>
+<li>
+<p>Use a File Explorer like <strong>FE Explore</strong> or <strong>X-plore</strong> and copy the EXE to somewhere in the C: drive</p>
+</li>
+<li>
+<p>Run the copied EXE. The ROM, BOOT and ROOT should be dumped in the MMC card.</p>
+</li>
+<li>
+<p>Access the MMC card on computer and obtain only the ROM file. Rename it to <em>SYM.ROM</em></p>
+</li>
+</ol>
+<h2 id="install-n-gage-device-from-rom">Install N-Gage device from ROM</h2>
+<p>Using the <em>ROM</em> obtained, install the device using the <a href="/quickstart/basic/installdevice/#rom-rpkg-method"><em>ROM + RPKG method</em></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Using this method, you just need to browse to the ROM. For ease, name the ROM as <em>SYM.ROM</em>. If it asked you for RPKG, contact the developer for support.</p>
+</div>
+<h2 id="install-n-gage-games">Install N-Gage games</h2>
+<p><strong>N-Gage</strong> game files sit on MMC card, unprotected in <strong>FAT32</strong> filesystem. There is usually two types of game version you might have access to:</p>
+<ul>
+<li>
+<p><strong>Patched games:</strong> These games are patched by hacker to bypass DRM. Most of the times they will be very thoughtful to disable multiplayer and <em>N-Gage Arena</em> too, to encourage you to buy the game after trying out the patch.</p>
+</li>
+<li>
+<p><strong>DRM-ed game:</strong> These games rely on the presence of a physical MMC card to check for its MMC-ID, to see if the game is contained on a copied-card or not sit on a MMC card at all. The executable of the game is obsfucated so that reverse engineering is harder. Most of N-Gage libraries do this.</p>
+</li>
+</ul>
+<p>For <strong>Patched games</strong>, see install instructions <a href="/quickstart/basic/installapp/#n-gage-game-card-dump">here</a>.</p>
+<p>For <strong>DRM-ed game</strong>, in the future, planned <strong>AAru</strong> support should simplify the play process. But for now, there is no way to install them. See the next section on how to play them.</p>
+<h2 id="play-drm-ed-n-gage-games">Play DRM-ed N-Gage games</h2>
+<p><strong>EKA2L1</strong> provides some method to simulate the MMC environment. To play authenticate DRM-protected games on the emulator:</p>
+<ol>
+<li>
+<p>Edit the <em>MMC-ID</em> to have the same value as on a real <em>MMC-ID card</em> contains the game you want to play. There are some written applications that can do this extraction. Please contact the emulator developers on interest.</p>
+<ul>
+<li>
+<p>On <strong>Android</strong>, open the upper-right menu, and go to <strong>Settings/System</strong>. Edit the MMC ID setting here.</p>
+</li>
+<li>
+<p>On <strong>Desktop</strong>, open the config.yml, which is in your current running directory (on <strong>Windows</strong>, it should be in the same folder as the <em>EXE</em>). Edit or add the MMC-ID key-value pair. Here is an example:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">mmc-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">00000000-00000000-00000000-00000000</span><span class="w"></span>
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Mount the game folder. The root of the game folder should contains a <strong>System</strong> folder.</p>
+<ul>
+<li>
+<p>On <strong>Android</strong>, open the upper-right menu, and choose <strong>Mount MMC/SD card</strong></p>
+</li>
+<li>
+<p>On <strong>Desktop</strong>, go to <em>File/Mount game card dump/Folder</em>, and browse to the folder you want to mount.</p>
+<ul>
+<li>Note that the <strong>Folder</strong> field shows the name of the current folder. If the field shows <strong>System</strong>, it is not valid. But the emulator will put out a warning for you if that happens.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<figure>
+<p><img alt="N-Gage game card dialog" src="/quickstart/assets/ngage/mount_example.png" />
+  </p>
+<figcaption>Mount game card dump window</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Due to scoped storage change on Android, running the mounted game will take a long time to startup and might freeze in the way.</p>
+</div>
+<p>The game should appear in the application list if there's no problem. You can click on the game icon to play.</p>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../basic/installapp/" class="md-footer__link md-footer__link--prev" aria-label="Trước: Install apps" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Trước
+              </span>
+              Install apps
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../j2me/" class="md-footer__link md-footer__link--next" aria-label="Sau: J2ME" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Sau
+              </span>
+              J2ME
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.expand"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Sao ch\u00e9p xong", "clipboard.copy": "Sao ch\u00e9p v\u00e0o b\u1ed9 nh\u1edb", "search.config.lang": "vi", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "T\u00ecm ki\u1ebfm", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "Kh\u00f4ng t\u00ecm th\u1ea5y t\u00e0i li\u1ec7u li\u00ean quan", "search.result.one": "1 t\u00e0i li\u1ec7u li\u00ean quan", "search.result.other": "# t\u00e0i li\u1ec7u li\u00ean quan", "search.result.placeholder": "Nh\u1eadp \u0111\u1ec3 b\u1eaft \u0111\u1ea7u t\u00ecm ki\u1ebfm", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,946 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="https://raw.githubusercontent.com/EKA2L1/EKA2L1/master/src/emu/qt/assets/duck_tank_fedora.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.1">
+    
+    
+      
+        <title>Bluetooth netplay - EKA2L1 Quickstart</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#795649">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bluetooth-netplay" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../" title="EKA2L1 Quickstart" class="md-header__button md-logo" aria-label="EKA2L1 Quickstart" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/EKA2L1/EKA2L1/master/src/emu/qt/assets/duck_tank_fedora.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EKA2L1 Quickstart
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Bluetooth netplay
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="../../btnetplay/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="../../vi/btnetplay/" hreflang="vi" class="md-select__link">
+                    Tiếng Việt
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="EKA2L1 Quickstart" class="md-nav__button md-logo" aria-label="EKA2L1 Quickstart" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/EKA2L1/EKA2L1/master/src/emu/qt/assets/duck_tank_fedora.png" alt="logo">
+
+    </a>
+    EKA2L1 Quickstart
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://12z1.com/" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Welcome
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements/" class="md-nav__link">
+        Requirements
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../donation/" class="md-nav__link">
+        Donation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Basic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Basic" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Basic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/wheretostart/" class="md-nav__link">
+        Where to start
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/installdevice/" class="md-nav__link">
+        Install a device
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/installapp/" class="md-nav__link">
+        Install apps
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ngage/" class="md-nav__link">
+        N-Gage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../j2me/" class="md-nav__link">
+        J2ME
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Bluetooth netplay
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Bluetooth netplay
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#open-configuration-window" class="md-nav__link">
+    Open configuration window
+  </a>
+  
+    <nav class="md-nav" aria-label="Open configuration window">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#android" class="md-nav__link">
+    Android
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desktop" class="md-nav__link">
+    Desktop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-for-lan" class="md-nav__link">
+    Configure for LAN
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure for LAN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mechanism" class="md-nav__link">
+    Mechanism
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    Steps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-for-server" class="md-nav__link">
+    Configure for Server
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure for Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mechanism_1" class="md-nav__link">
+    Mechanism
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps_1" class="md-nav__link">
+    Steps
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-network-router" class="md-nav__link">
+    Configure the network router
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-inside-the-emulator" class="md-nav__link">
+    Configure inside the emulator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-for-direct-ips" class="md-nav__link">
+    Configure for Direct IPs
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure for Direct IPs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mechanism_2" class="md-nav__link">
+    Mechanism
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps_2" class="md-nav__link">
+    Steps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-in-game-name" class="md-nav__link">
+    Changing in-game name
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ipv6-play-warnings" class="md-nav__link">
+    IPv6 play warnings
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#open-configuration-window" class="md-nav__link">
+    Open configuration window
+  </a>
+  
+    <nav class="md-nav" aria-label="Open configuration window">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#android" class="md-nav__link">
+    Android
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desktop" class="md-nav__link">
+    Desktop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-for-lan" class="md-nav__link">
+    Configure for LAN
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure for LAN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mechanism" class="md-nav__link">
+    Mechanism
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    Steps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-for-server" class="md-nav__link">
+    Configure for Server
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure for Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mechanism_1" class="md-nav__link">
+    Mechanism
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps_1" class="md-nav__link">
+    Steps
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-network-router" class="md-nav__link">
+    Configure the network router
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-inside-the-emulator" class="md-nav__link">
+    Configure inside the emulator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-for-direct-ips" class="md-nav__link">
+    Configure for Direct IPs
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure for Direct IPs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mechanism_2" class="md-nav__link">
+    Mechanism
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps_2" class="md-nav__link">
+    Steps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-in-game-name" class="md-nav__link">
+    Changing in-game name
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ipv6-play-warnings" class="md-nav__link">
+    IPv6 play warnings
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="bluetooth-netplay">Bluetooth netplay</h1>
+<p><strong>EKA2L1</strong> can route local bluetooth network to either <em>LAN</em> or <em>Internet</em>. Currently, this is mainly used for bridiging N-Gage local bluetooth multiplayer. </p>
+<p>This page will instruct you on how to configure and setup multiplayer on EKA2L1 through 2 main modes: <em>LAN</em> and <em>Server</em>. <em>Direct IPs</em>  will be mentioned later after the two modes.</p>
+<h2 id="open-configuration-window">Open configuration window</h2>
+<p>In this window/view, you can choose <em>Bluetooth netplay mode</em>, and edit some more configuration variables that will be relevant later on.</p>
+<h3 id="android">Android</h3>
+<p>Navigate to the top-right three dots button, touch and select <strong>Settings</strong>. In <strong>Settings</strong>, choose <strong>Bluetooth Netplay</strong>.</p>
+<h3 id="desktop">Desktop</h3>
+<p>In the main window, navigate to <em>Bluetooth/Netplay/Configure</em> The configure window appears.</p>
+<h2 id="configure-for-lan">Configure for LAN</h2>
+<h3 id="mechanism">Mechanism</h3>
+<p><em>LAN</em> mode will allow all players in the same local network, or in more readable language: people in the same house, in the same classroom, connect to the same Internet router, etc...</p>
+<p><em>LAN</em> mode will only use <strong>IPv4</strong> to broadcast message across all devices on network, asking if any devices that is running on <strong>EKA2L1</strong> want to connct to the current device. Other devices that is running <strong>EKA2L1</strong> will hear the request, check the secert passphrase, and if it matches, they will respond back with an accept message to the one sending the broadcast.</p>
+<h3 id="steps">Steps</h3>
+<p>In the configuration window, choose <em>LAN</em> as the bluetooth netplay mode.</p>
+<p>To allow only some specific people to be able to discover and play with you, set yourself a <strong>Password</strong>. People with the same <em>Password</em> can see each others, and those that does not have your password will not see you.</p>
+<p>Send the password to people you want to play with, ask them to copy the password to the <strong>Password</strong> field/preference in the configuration window.</p>
+<p>After that, restart the emulator for the change to be effective. On Android, please exit and relaunch the emulator again.</p>
+<h2 id="configure-for-server">Configure for Server</h2>
+<h3 id="mechanism_1">Mechanism</h3>
+<p><strong>EKA2L1</strong> instances will login and register itself to the server. When the other instances ask for a scan to find other players, the server will reply back with IPs of people who have the same password as the one who is asking. After that, emulator instances will do <em>P2P</em> with each others.</p>
+<p>By default, the server address is <a href="http://btnetplay.12z1.com">btnetplay.12z1.com</a>. But since it's developer-powered server that requires money to run, and there's no stable fund, you should consider changing to a community-powered server. Else you can <a href="/donation">donate</a> to the developers (server cost for now is 5$ a month) :)</p>
+<h3 id="steps_1">Steps</h3>
+<p>In the configuration window, choose <em>Server</em> as the bluetooth netplay mode.</p>
+<h4 id="configure-the-network-router">Configure the network router</h4>
+<p>To make your emulator instance visible to other emulator instances:</p>
+<ul>
+<li>If you use <em>IPv4</em>, check if your router has UPnP enabled.<ul>
+<li>If yes, toggle the <strong>Enable UPnP</strong> option to <em>On</em>.</li>
+<li>If no, then you need to setup manual port forwarding (also called port mapping). Go to the router control panel, and enable port forwarding for your computer, for these ports:<ul>
+<li>Port 35689 <em>(UDP or TCP/UDP)</em></li>
+<li>Port 15000 - 15100 <em>(TCP or TCP/UDP)</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure>
+<p><img alt="Example port forward rules" src="/quickstart/assets/btnetplay/example_port_forward_rules.png" />
+  </p>
+<figcaption>Example port forward/mapping rules for EKA2L1 on a Huawei router</figcaption>
+</figure>
+<ul>
+<li>
+<p>If you use <em>IPv6</em>:</p>
+<ul>
+<li>
+<p>Check if your router has IPv6 firewall enabled. If the answer is yes, exclude these ports from the firewall:</p>
+<ul>
+<li>Port 35689 <em>(UDP or TCP/UDP)</em></li>
+<li>Port 15000 - 15100 <em>(TCP or TCP/UDP)</em></li>
+</ul>
+</li>
+<li>
+<p>Turning off the firewall completely is not recommended.</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For the port range from 15000 to 15100, these depends on the <em>Port offset</em> value you set. <em>Port offset</em> value should not be changed by normal users, unless you know what it does (the same functionality as in <strong>PPSSPP</strong>)</p>
+<p>For more specific instructions on how to do manual port forwarding or enable UPnP, consider searching the internet for your specific-router or network operators. </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Try to avoid using mobile network like 3G/4G. They don't have control panel to allow port-forwarding or add IPv6 firewall exception. If some mobile operators have control panel then you can try.</p>
+</div>
+<h4 id="configure-inside-the-emulator">Configure inside the emulator</h4>
+<p>In the configuration window, choose <em>Server</em> as the bluetooth netplay mode.</p>
+<figure>
+<p><img alt="List of configurations in Server mode on Desktop version" src="/quickstart/assets/btnetplay/configure_window_desktop.png" />
+  </p>
+<figcaption>List of configurations in Server mode on Desktop version</figcaption>
+</figure>
+<ul>
+<li>
+<p>To allow only some specific people to be able to discover and play with you, set yourself a <strong>Password</strong>. People with the same <em>Password</em> can see each others, and those that does not have your password will not see you. 
+  Send the password to people you want to play with, ask them to copy the password to the <strong>Password</strong> field/preference in the configuration window.</p>
+</li>
+<li>
+<p>You can change to another server by editing the <em>Server address</em> configuration. By default the server is <a href="http://btnetplay.12z1.com">btnetplay.12z1.com</a>.</p>
+</li>
+</ul>
+<p>After that, restart the emulator for the change to be effective. On Android, please exit and relaunch the emulator again.</p>
+<h2 id="configure-for-direct-ips">Configure for Direct IPs</h2>
+<h3 id="mechanism_2">Mechanism</h3>
+<p>Direct IPs is a more secertive mode. Each players add IPs of other players you want to play with. Port forwarding or firewall excluding methods, like in <em>Server mode</em>, are required.</p>
+<h3 id="steps_2">Steps</h3>
+<ol>
+<li>Visit server mode's <a href="##configure-the-network-router">Configure the network router</a> section and follow the instructions</li>
+<li>Visit bluetooth netplay configuration window, switch the mode to <em>Direct IPs</em></li>
+<li>On:<ul>
+<li><strong>Desktop</strong>: Click on the big <strong>Open friends' IP editor</strong> button, or visit <em>Bluetooth/Netplay/Friends' IP editor</em></li>
+<li><strong>Android</strong>: Click on the <strong>Direct IPs manager</strong> preference in the configuration window</li>
+</ul>
+</li>
+<li>Add/remove your friend IPs. Then relaunch the emulator. On Android, you should exit and reopen the emulator again.</li>
+</ol>
+<h2 id="changing-in-game-name">Changing in-game name</h2>
+<p>To change the in-game name in local bluetooth mode, you need to change the device's Bluetooth name.</p>
+<ul>
+<li><strong>Android:</strong> Click on the three dots, then go to <em>Settings/System</em>. Click on the <strong>Friendly device name</strong> to change the current name.</li>
+<li><strong>Windows:</strong> Go to <em>File/Preferences/System</em>, and look for a <strong>Friendly device name</strong> input field. You can change the device name in here, and it will be auto-saved.</li>
+</ul>
+<h2 id="ipv6-play-warnings">IPv6 play warnings</h2>
+<p>If you use IPv6 to play online, there will be moment where the temporary IPv6 got released and a new one replaced. When you encounter connection failure, try to reconnect your wifi/internet. </p>
+<p>Additionally, if you want to play for a while without interruption, try increase the <strong>IPv6 lease time</strong>. This is the time interval between two IPv6 temporary address replacement. Usually it will be 24 hour.</p>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../j2me/" class="md-footer__link md-footer__link--prev" aria-label="Previous: J2ME" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              J2ME
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.expand"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+    
+  </body>
+</html>

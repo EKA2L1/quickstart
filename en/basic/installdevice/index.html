@@ -1,0 +1,841 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="https://raw.githubusercontent.com/EKA2L1/EKA2L1/master/src/emu/qt/assets/duck_tank_fedora.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.1">
+    
+    
+      
+        <title>Install a device - EKA2L1 Quickstart</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#795649">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#install-a-device" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="EKA2L1 Quickstart" class="md-header__button md-logo" aria-label="EKA2L1 Quickstart" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/EKA2L1/EKA2L1/master/src/emu/qt/assets/duck_tank_fedora.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EKA2L1 Quickstart
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Install a device
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="../../../basic/installdevice/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="../../../vi/basic/installdevice/" hreflang="vi" class="md-select__link">
+                    Tiếng Việt
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="EKA2L1 Quickstart" class="md-nav__button md-logo" aria-label="EKA2L1 Quickstart" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/EKA2L1/EKA2L1/master/src/emu/qt/assets/duck_tank_fedora.png" alt="logo">
+
+    </a>
+    EKA2L1 Quickstart
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://12z1.com/" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Welcome
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requirements/" class="md-nav__link">
+        Requirements
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../donation/" class="md-nav__link">
+        Donation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Tutorials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Basic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Basic" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Basic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wheretostart/" class="md-nav__link">
+        Where to start
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Install a device
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Install a device
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-method-to-choose" class="md-nav__link">
+    Installation method to choose
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation method to choose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rom-rpkg-method" class="md-nav__link">
+    ROM + RPKG method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firmware-method" class="md-nav__link">
+    Firmware method
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-files" class="md-nav__link">
+    Required files
+  </a>
+  
+    <nav class="md-nav" aria-label="Required files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-s60v1-and-s60v2-devices-n-gage-n70-etc" class="md-nav__link">
+    For S60v1 and S60v2 devices (N-Gage, N70, etc...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-s60v3-and-upper-5320-5800-n97-n-gage-20-compatible-devices-etc" class="md-nav__link">
+    For S60v3 and upper (5320, 5800, N97, N-Gage 2.0 compatible devices, etc...)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-steps-for-pc-windows-macos-linux" class="md-nav__link">
+    Install steps for PC (Windows, MacOS, Linux)
+  </a>
+  
+    <nav class="md-nav" aria-label="Install steps for PC (Windows, MacOS, Linux)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-by-rom-and-rpkg" class="md-nav__link">
+    Install by ROM and RPKG
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-by-firmware" class="md-nav__link">
+    Install by firmware
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-steps-for-android" class="md-nav__link">
+    Install steps for Android
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installapp/" class="md-nav__link">
+        Install apps
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ngage/" class="md-nav__link">
+        N-Gage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../j2me/" class="md-nav__link">
+        J2ME
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../btnetplay/" class="md-nav__link">
+        Bluetooth netplay
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-method-to-choose" class="md-nav__link">
+    Installation method to choose
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation method to choose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rom-rpkg-method" class="md-nav__link">
+    ROM + RPKG method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firmware-method" class="md-nav__link">
+    Firmware method
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-files" class="md-nav__link">
+    Required files
+  </a>
+  
+    <nav class="md-nav" aria-label="Required files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-s60v1-and-s60v2-devices-n-gage-n70-etc" class="md-nav__link">
+    For S60v1 and S60v2 devices (N-Gage, N70, etc...)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-s60v3-and-upper-5320-5800-n97-n-gage-20-compatible-devices-etc" class="md-nav__link">
+    For S60v3 and upper (5320, 5800, N97, N-Gage 2.0 compatible devices, etc...)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-steps-for-pc-windows-macos-linux" class="md-nav__link">
+    Install steps for PC (Windows, MacOS, Linux)
+  </a>
+  
+    <nav class="md-nav" aria-label="Install steps for PC (Windows, MacOS, Linux)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-by-rom-and-rpkg" class="md-nav__link">
+    Install by ROM and RPKG
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-by-firmware" class="md-nav__link">
+    Install by firmware
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-steps-for-android" class="md-nav__link">
+    Install steps for Android
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="install-a-device">Install a device</h1>
+<p>First, build or <a href="https://12z1.com/download/">download</a> EKA2L1 for the target platform you want to run the emulator on.</p>
+<h2 id="installation-method-to-choose">Installation method to choose</h2>
+<p>Depends on what device you want to use, the installation method differs. There are two main method: using <em>ROM+RPKG</em> and using <em>firmware</em></p>
+<h3 id="rom-rpkg-method">ROM + RPKG method</h3>
+<p>Devices that run on S60v1 and S60v2 like Nokia N-Gage, Nokia N70, etc... should use this method. S60v1 devices should only need the ROM for this installation method.</p>
+<h3 id="firmware-method">Firmware method</h3>
+<p>S60v3 devices and higher (S60v5, S^3, Belle, ...). These firmware are distributed widely, so they are easier to obtain then ROM+RPKG.</p>
+<h2 id="required-files">Required files</h2>
+<h3 id="for-s60v1-and-s60v2-devices-n-gage-n70-etc">For S60v1 and S60v2 devices (N-Gage, N70, etc...)</h3>
+<ul>
+<li>The ROM of the device</li>
+<li>The RPKG file<ul>
+<li>This is a custom container of the Z drive (the same device as where the ROM was dumped). See <a href="https://github.com/EKA2L1/EKA2L1/wiki/Dumping-the-ROM-and-ROFS">Dumping section on Wiki</a> to find out how to dump it.</li>
+<li>The file may only be needed with S60v2 devices. The emulator will asks for it during the installation if it detects only ROM alone is not enough.</li>
+</ul>
+</li>
+</ul>
+<h3 id="for-s60v3-and-upper-5320-5800-n97-n-gage-20-compatible-devices-etc">For S60v3 and upper (5320, 5800, N97, N-Gage 2.0 compatible devices, etc...)</h3>
+<p>There are two options that you can choose:</p>
+<ul>
+<li>ROM and RPKG of the device (same as S60v1 and S60v2)</li>
+<li>A firmware of the target device. <strong>Make sure</strong> the firmware you got also has a VPL file along with it.</li>
+</ul>
+<p>At the moment, for users only interested in N-Gage 2.0, Nokia 5320 device is the most maintained and supported device for this purpose.</p>
+<h2 id="install-steps-for-pc-windows-macos-linux">Install steps for PC (Windows, MacOS, Linux)</h2>
+<p>Launch the emulator with command line option <strong>--help</strong> if you want to interact through command lines and need list of commands.</p>
+<p>To install a new device, please go to <em>File/Install/Device</em>, or follow the dialog that ask you to install a device appears on first run of the emulator.</p>
+<figure>
+<p><img alt="The device install dialog" src="/quickstart/assets/setup/device_dialog.png" />
+  </p>
+<figcaption>The device install dialog</figcaption>
+</figure>
+<h3 id="install-by-rom-and-rpkg">Install by ROM and RPKG</h3>
+<p>Choose the <strong>Device dump</strong> installation method in the combo-box, and click the first <em>Browse</em> to select the ROM you have prepared. If the emulator detects that the ROM is not enough alone, a RPKG file browser will appear.</p>
+<figure>
+<p><img alt="The RPKG field appears with 5320 ROM selected" src="/quickstart/assets/setup/device_dialog_with_rpkg.png" />
+  </p>
+<figcaption>The RPKG field appears with 5320 ROM selected</figcaption>
+</figure>
+<p>After you have filled all the paths, press <strong>Install</strong>. If you want to cancel the installation, you can press the <strong>Cancel</strong> button next to <strong>Install</strong>.</p>
+<p>Then wait for the progress bar to be completed and a success dialog to pop up.</p>
+<h3 id="install-by-firmware">Install by firmware</h3>
+<p>Choose the <strong>Firmware (VPL)</strong> installation method in the combo-box. The ROM label will be renamed to VPL, and then you can click <strong>Browse</strong> to choose the VPL that came along with the firmware.</p>
+<figure>
+<p><img alt="The VPL install dialog" src="/quickstart/assets/setup/device_dialog_vpl.png" />
+  </p>
+<figcaption>The VPL install dialog</figcaption>
+</figure>
+<p>A dialog should appear request you to choose a firmware variant. This usually is related to region of the device and its style (black or red), and should not matter much on the emulator.</p>
+<p>After that is the same process as <strong>Device dump</strong>.</p>
+<figure>
+<p><img alt="Installation success dialog" src="/quickstart/assets/setup/device_dialog_install_success.png" />
+  </p>
+<figcaption>Installation success dialog</figcaption>
+</figure>
+<p>If you meets the dialog above, then that means you are done installing a device.</p>
+<h2 id="install-steps-for-android">Install steps for Android</h2>
+<p>First run of the emulator should show you a dialog that requests you to install a device. Press the <em>Install</em> dialog, to quickly get to the <strong>Device manager</strong>.</p>
+<figure>
+<p><img alt="The request install dialog" src="/quickstart/assets/setup/android_device_install_request.jpg" />
+  </p>
+<figcaption>The request install dialog</figcaption>
+</figure>
+<p>If the dialog does not appear, press the three dots at the top right of your screen, and select <strong>Devices</strong>.</p>
+<figure>
+<p><img alt="Android devices screen" src="/quickstart/assets/setup/android_devices_activity.jpg" />
+  </p>
+<figcaption>Android devices screen</figcaption>
+</figure>
+<p>In this screen:</p>
+<ul>
+<li>
+<p>If you have prepared a ROM (and RPKG if needed), choose the <strong>Device dump</strong> installation method, and press on the <em>ROM</em> button to select the ROM you have prepared. If the emulator detects that the ROM is not enough alone, a RPKG file browser will appear.</p>
+</li>
+<li>
+<p>If you have prepared a firmware, choose the <strong>Firmware (VPL)</strong> installation method. The ROM button will be renamed to VPL, and then you can click on the <em>VPL</em> button to choose the VPL that came along with the firmware.</p>
+</li>
+</ul>
+<figure>
+<p><img alt="All file paths are filled" src="/quickstart/assets/setup/android_device_all_choosen.jpg" />
+  </p>
+<figcaption>All file paths are filled</figcaption>
+</figure>
+<p>After you have filled all the paths, press <em>Install</em>. You can only cancel this operation by exiting the app, and no need further action until a small toast notification tells you that the installation is success or encounters failures.</p>
+<figure>
+<p><img alt="New device appeared after installation" src="/quickstart/assets/setup/android_new_device_appears.jpg" />
+  </p>
+<figcaption>New device appeared after installation</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you have encountered failure during the installation, please visit the <a href="https://discord.gg/5Bm5SJ9">Discord</a> server to receive support.</p>
+</div>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../wheretostart/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Where to start" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Where to start
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../installapp/" class="md-footer__link md-footer__link--next" aria-label="Next: Install apps" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Install apps
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "navigation.expand"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+    
+  </body>
+</html>

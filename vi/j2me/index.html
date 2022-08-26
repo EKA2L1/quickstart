@@ -1,0 +1,678 @@
+
+<!doctype html>
+<html lang="vi" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="https://raw.githubusercontent.com/EKA2L1/EKA2L1/master/src/emu/qt/assets/duck_tank_fedora.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.1">
+    
+    
+      
+        <title>J2ME - EKA2L1 Quickstart</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#795649">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#j2me" class="md-skip">
+          Vào thẳng nội dung
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../" title="EKA2L1 Quickstart" class="md-header__button md-logo" aria-label="EKA2L1 Quickstart" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/EKA2L1/EKA2L1/master/src/emu/qt/assets/duck_tank_fedora.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EKA2L1 Quickstart
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              J2ME
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="../../j2me/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="./" hreflang="vi" class="md-select__link">
+                    Tiếng Việt
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Tìm kiếm" placeholder="Tìm kiếm" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="EKA2L1 Quickstart" class="md-nav__button md-logo" aria-label="EKA2L1 Quickstart" data-md-component="logo">
+      
+  <img src="https://raw.githubusercontent.com/EKA2L1/EKA2L1/master/src/emu/qt/assets/duck_tank_fedora.png" alt="logo">
+
+    </a>
+    EKA2L1 Quickstart
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://12z1.com/" class="md-nav__link">
+        Trang chủ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Chào mừng
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements/" class="md-nav__link">
+        Yêu cầu cấu hình
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../donation/" class="md-nav__link">
+        Donation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Hướng dẫn
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hướng dẫn" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Hướng dẫn
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Cơ bản
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cơ bản" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Cơ bản
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/wheretostart/" class="md-nav__link">
+        Where to start
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/installdevice/" class="md-nav__link">
+        Install a device
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/installapp/" class="md-nav__link">
+        Install apps
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ngage/" class="md-nav__link">
+        N-Gage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          J2ME
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        J2ME
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Mục lục
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#supported-emulated-devices" class="md-nav__link">
+    Supported emulated devices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-midp-versions" class="md-nav__link">
+    Supported MIDP versions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-and-play-jars" class="md-nav__link">
+    Install and play JARs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faqs" class="md-nav__link">
+    FAQs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../btnetplay/" class="md-nav__link">
+        Bluetooth netplay
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Mục lục
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#supported-emulated-devices" class="md-nav__link">
+    Supported emulated devices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-midp-versions" class="md-nav__link">
+    Supported MIDP versions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-and-play-jars" class="md-nav__link">
+    Install and play JARs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faqs" class="md-nav__link">
+    FAQs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="j2me">J2ME</h1>
+<p>Most phones running <strong>Symbian</strong> has support for playing J2ME apps/games to some extend, starting from Series 60 version 1. </p>
+<p>The J2ME runtime and J2ME player is included in the ROM, and with each iteration of Symbian, the J2ME runner evolved and sometime is completely different from previous J2ME runner on older <strong>Symbian</strong> version.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The support of running J2ME applications on EKA2L1 comes off as just-for-fun. If you want to play J2ME games with more customization, check out <strong>KEmulator</strong> on desktop, or <strong><a href="https://play.google.com/store/apps/details?id=ru.playsoftware.j2meloader&amp;hl=en&amp;gl=US">J2ME-Loader</a></strong> on Android</p>
+</div>
+<h2 id="supported-emulated-devices">Supported emulated devices</h2>
+<p>EKA2L1 tries to utilise the J2ME runners on ROM of installed devices. Currently, devices that ran these OS versions can be used to run J2ME applications on emulator:</p>
+<ul>
+<li><strong>Series 60 version 1</strong> (S60v1)</li>
+</ul>
+<p>Due to the complexity of the J2ME system, OS version starting from Series 60 version 2 (S60v2) has not been supported. The priority of working on the support is low.</p>
+<h2 id="supported-midp-versions">Supported MIDP versions</h2>
+<p>The emulator will only accept J2ME with the following MIDP versions <em>(declared in MANIFEST.MF):</em></p>
+<ul>
+<li><strong>MIDP 1.0</strong></li>
+</ul>
+<p>This is due to the fact that S60v1 J2ME runner only support MIDP 1.0.</p>
+<h2 id="install-and-play-jars">Install and play JARs</h2>
+<p><strong>1.</strong> Make sure you have switched to an S60v1 device.</p>
+<p><strong>2.</strong> Click on the <strong>File</strong> menu, and then navigate to <strong>Install/JAR</strong>. Click and choose JAR file you want to install.</p>
+<p><img alt="desc" src="/quickstart/assets/j2me/j2me_install_menu_and_device.png" /></p>
+<p>For example, in the image above, you can see N-Gage device being choosen in the right-hand combo box. And <strong>File/Install/JAR</strong> menu is displayed.</p>
+<ul>
+<li>A dialog will appear after telling you if the installation is success or encountered error. The error message should be straight forward to understand. </li>
+<li>If you encountered the error that the JAR can not be installed on the current device, check if your current active device <em>(see the device combobox next to the search bar, at the upper of the app grid)</em> is a <strong>S60v1</strong> device or not</li>
+</ul>
+<p><strong>3.</strong> After the installation finished, next to the device list combo-box next to the app search bar, you will see a button.</p>
+<ul>
+<li>If its name is <strong>Symbian</strong>, that means the app list is in native Symbian mode. It will only display native applications and games, that is <strong>commonly installed</strong> through the <strong>SIS/SISX</strong> format.</li>
+<li>If its name is <strong>J2ME</strong>, the app list grid will switch to J2ME mode, which will display only J2ME game.</li>
+</ul>
+<figure>
+<p><img alt="App list in Symbian mode" src="/quickstart/assets/j2me/j2me_native_app_list.png" />
+  </p>
+<figcaption>App list in Symbian mode, which displays native game.</figcaption>
+</figure>
+<p>The image above shows the native application list in action. The button being circled and arrow-pointed is naming the current application list mode.</p>
+<p>To switch to <strong>J2ME mode</strong>, press on that same button.</p>
+<figure>
+<p><img alt="App list in J2ME mode" src="/quickstart/assets/j2me/j2me_app_list.png" />
+  </p>
+<figcaption>The app list is now in J2ME mode. Native applications are not in display anymore.</figcaption>
+</figure>
+<p>To switch back to <strong>Symbian mode</strong>, press on that same button again.</p>
+<p>Toggle the button will switch between the two modes.</p>
+<h2 id="faqs">FAQs</h2>
+<p><strong>Q:</strong> I have installed the JARs successfully, but when I come back and launch them, the emulator says <em>Can't open the application!</em>. How to fix it?</p>
+<p><strong>A:</strong> You should first check if you are using the correct device to play those J2ME games. For now, only <strong>S60v1</strong> devices are supported, so make sure the current device is S60v1.</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> The game is MIDP-1.0 but they still does not work on emulator!</p>
+<p><strong>A:</strong> Some games depend on different vendor's APIs or simply just missing some kind of API that <strong>S60v1 J2ME</strong> runner does not provide. However, if you are confident that it runs on the original phone, you can raise an issues with the developers.</p>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../ngage/" class="md-footer__link md-footer__link--prev" aria-label="Trước: N-Gage" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Trước
+              </span>
+              N-Gage
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../btnetplay/" class="md-footer__link md-footer__link--next" aria-label="Sau: Bluetooth netplay" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Sau
+              </span>
+              Bluetooth netplay
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.expand"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Sao ch\u00e9p xong", "clipboard.copy": "Sao ch\u00e9p v\u00e0o b\u1ed9 nh\u1edb", "search.config.lang": "vi", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "T\u00ecm ki\u1ebfm", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "Kh\u00f4ng t\u00ecm th\u1ea5y t\u00e0i li\u1ec7u li\u00ean quan", "search.result.one": "1 t\u00e0i li\u1ec7u li\u00ean quan", "search.result.other": "# t\u00e0i li\u1ec7u li\u00ean quan", "search.result.placeholder": "Nh\u1eadp \u0111\u1ec3 b\u1eaft \u0111\u1ea7u t\u00ecm ki\u1ebfm", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+    
+  </body>
+</html>
