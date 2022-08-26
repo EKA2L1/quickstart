@@ -3,7 +3,7 @@
 EKA2L1 supported these installation methods:
 
 - **SIS/SISX:** Universally across all platform (desktop, Android).
-- **JAR:** A limited subset of J2ME apps/games can be installed and ran on the *Desktop* version of the emulator. For more information, see the [**J2ME**](/j2me) page.
+- **JAR:** A limited subset of J2ME apps/games can be installed and ran on the *Desktop* version of the emulator. For more information, see the [**J2ME**](/{{ posts_root }}/j2me) page.
 - **N-Gage game card dump:** Game card dump that has been patched to be independent from MMC information can be installed into emulator storage. Raw game card dump should be load directly through Aaru dump (planned support).
 
 ## SIS/SISX
