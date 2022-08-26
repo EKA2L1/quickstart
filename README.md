@@ -5,4 +5,4 @@
 Additionally, please add your language in:
 - quickstart/mkdocs.yml file
 
-Thanks a lot for your consideration.
+Thanks a lot for your consideration!
