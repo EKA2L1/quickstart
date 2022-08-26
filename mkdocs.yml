@@ -1,0 +1,50 @@
+site_name: EKA2L1 Quickstart
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.expand
+  palette:
+    scheme: slate
+    primary: brown
+  logo: https://raw.githubusercontent.com/EKA2L1/EKA2L1/master/src/emu/qt/assets/duck_tank_fedora.png
+  favicon: https://raw.githubusercontent.com/EKA2L1/EKA2L1/master/src/emu/qt/assets/duck_tank_fedora.png
+plugins:
+  - i18n:
+      default_language: en
+      languages:
+        en:
+          name: English
+          build: true
+        vi:
+          name: Tiếng Việt
+          build: true
+      nav_translations:
+        vi:
+          'Basic': Cơ bản
+          'Home': Trang chủ
+          'Tutorials': Hướng dẫn
+          'Welcome': Chào mừng
+  - search
+  - macros
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+nav:
+  - Home: 'https://12z1.com/'
+  - Welcome: index.md
+  - requirements.md
+  - donation.md
+  - 'Tutorials':
+    - 'Basic':
+        - basic/wheretostart.md
+        - basic/installdevice.md
+        - basic/installapp.md
+    - ngage.md
+    - j2me.md
+    - btnetplay.md    
+extra:
+  current_duck_url: https://raw.githubusercontent.com/EKA2L1/EKA2L1/master/src/emu/qt/assets/duck_tank_fedora.png
